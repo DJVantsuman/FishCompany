@@ -22,7 +22,7 @@ public class Application {
         Application application = (Application)context.getBean("application");
         
       // System.out.println(application.addCustomer().getFirstName());
-      //  System.out.println(application.findById(1).getLastName() + " " + application.findById(1).getFirstName());
+      System.out.println(application.findById(2).getLastName() + " " + application.findById(2).getFirstName());
       // application.remove(1);
 	}
 	

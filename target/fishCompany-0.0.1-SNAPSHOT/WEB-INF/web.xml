@@ -7,10 +7,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 
     <display-name>FishCompany</display-name>
     
-   <!--
-		- Location of the XML file that defines the root application context.
-		- Applied by ContextLoaderListener.
-	-->
+    <!--
+            - Location of the XML file that defines the root application context.
+            - Applied by ContextLoaderListener.
+    -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring/application-config.xml</param-value>
@@ -22,21 +22,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     
     
     <!--
-		- Servlet that dispatches request to registered handlers (Controller implementations).
-	-->
+            - Servlet that dispatches request to registered handlers (Controller implementations).
+    -->
     <servlet>
-        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-name>action</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/mvc-config.xml</param-value>
-        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
 </web-app>

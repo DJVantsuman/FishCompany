@@ -7,25 +7,30 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.djvantsuman.fishCompany.dao.CustomerDao;
 import com.djvantsuman.fishCompany.entity.Customer;
+import java.util.List;
 
 @Named
 public class CustomerServiceImpl implements CustomerService {
-	
-	@Inject
-	private CustomerDao customerDao ;
 
-	@Transactional
-	public void save(Customer customer) {
-		customerDao.save(customer);
-	}
+    @Inject
+    private CustomerDao customerDao;
 
-	public Customer findById(int id) {
-		return customerDao.findById(id);
-	}
+    @Transactional
+    public void save(Customer customer) {
+        customerDao.save(customer);
+    }
 
-	@Transactional
-	public void remove(int id) {
-		customerDao.remove(id);
-	}
+    public Customer findById(int id) {
+        return customerDao.findById(id);
+    }
+
+    @Transactional
+    public void remove(int id) {
+        customerDao.remove(id);
+    }
+
+    public List<Customer> findAll() {
+        return customerDao.findAll();
+    }
 
 }
