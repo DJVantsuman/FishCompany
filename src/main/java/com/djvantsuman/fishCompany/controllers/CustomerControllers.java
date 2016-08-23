@@ -67,7 +67,7 @@ public class CustomerControllers {
     public String enterSuccess(@RequestParam String firstName, @RequestParam String password, Model model) {
         List<Customer> listC = customerService.findAll();
         for (Customer customer : listC) {
-            if (customer.getFirstName().equals(firstName) && customer.getPussvord().equals(password)) {
+            if (customer.getFirstName().equals(firstName) & customer.getPussvord().equals(password)) {
                 model.addAttribute(firstName_attribute, firstName);
                 model.addAttribute(lastName_attribute, customer.getLastName());
                 return "indexSuccess";

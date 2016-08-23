@@ -1,18 +1,5 @@
-<%-- 
-    Document   : indexSuccess
-    Created on : 16.08.2016, 23:15:21
-    Author     : Ivan
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<a href="../web.xml"></a>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>FTC</title>
-        <style type="text/css">
-                        
+         
+            
             body{ background-color: #E6E6FA }
 
             #wrapper{
@@ -87,43 +74,3 @@
                 display: inline;
                 font-size: 18px
             }
-
-        </style>
-    </head>
-    <body>
-        <div id="wrapper">
-
-            <div id="header">
-                <div id="headerImage"> 
-                    Image
-                </div>
-                <div>
-                    <div id="headerRegistration">
-                        <p class="line"> Здравствуйте, <pre>${lastName} ${firstName}</a> </p>
-                    </div>
-                    <div id="headerFTC" style="clear: right" >
-                        <h1 align="center">Fish Trade Company</h1>
-                    </div>
-                    <div height: 25px;>
-                            <p class="line"> Главная|</p>
-                            <p class="line"> Продукция| </p>
-                            <p class="line"> Производство| </p>
-                            <p class="line"> Партнерам| </p>
-                            <p class="line"> Контакты </p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="content">  </div>
-
-            <div id="menu"> 
-                <div id="reclame"> </div>
-                <div id="reclame"> </div>
-                <div id="reclame"> </div>
-            </div>
-
-            <div id="footer"> <pre><h3 align="right"> Украина, г.Киев, ул.Боровая 41     тел: 044 555 789 32</h3></pre> </div>
-
-        </div>
-    </body>
-</html>

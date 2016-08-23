@@ -1,5 +1,7 @@
 package com.djvantsuman.fishCompany.main;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -22,8 +24,9 @@ public class Application {
         Application application = (Application)context.getBean("application");
         
       // System.out.println(application.addCustomer().getFirstName());
-      System.out.println(application.findById(2).getLastName() + " " + application.findById(2).getFirstName());
+      //System.out.println(application.findById(2).getLastName() + " " + application.findById(2).getFirstName());
       // application.remove(1);
+        application.listCustomer();
 	}
 	
 	public Customer addCustomer(){
@@ -41,6 +44,13 @@ public class Application {
 	
 	public void remove(int id){
 		customerService.remove(id);
+	}
+	
+	public void listCustomer(){
+		List<Customer> listC = customerService.findAll();
+		for(Customer c: listC){
+			System.out.println(c.getFirstName() + " " + c.getLastName() + " " + c.getPussvord());
+		}
 	}
 
 }
